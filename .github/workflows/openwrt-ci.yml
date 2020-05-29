@@ -50,6 +50,7 @@ jobs:
           cd package
           mkdir openwrt-packages
           cd openwrt-packages
+          git glcon https://github.com/project-openwrt/luci-app-serverchan.git
               
           # sudo mkdir -p -m 777 /mnt/openwrt/bin /mnt/openwrt/build_dir/host /mnt/openwrt/build_dir/hostpkg /mnt/openwrt/dl /mnt/openwrt/feeds /mnt/openwrt/staging_dir
           # ln -s /mnt/openwrt/bin ./bin
@@ -183,6 +184,7 @@ jobs:
           CONFIG_PACKAGE_luci-i18n-usb-printer-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-v2ray-server-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-wrtbwmon-zh-cn=y
+          CONFIG_PACKAGE_uci-app-serverchan
           EOF
           
           # LuCI主题:
