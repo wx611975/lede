@@ -120,6 +120,10 @@ jobs:
           cat >> .config <<EOF
           CONFIG_EFI_IMAGES=y
           EOF
+          
+          #固件大小:
+          cat >> .config <<EOF
+          CONFIG_TARGET_ROOTFS_PARTSIZE=532
 
           # IPv6支持:
           cat >> .config <<EOF
@@ -174,8 +178,13 @@ jobs:
           CONFIG_PACKAGE_luci-app-vlmcsd=y
           CONFIG_PACKAGE_luci-app-diskman=y
           CONFIG_PACKAGE_luci-app-syncdial=y
+          CONFIG_PACKAGE_luci-i18n-rclone-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-usb-printer-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-v2ray-server-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-wrtbwmon-zh-cn=y
           EOF
-
+          
           # LuCI主题:
           cat >> .config <<EOF
           CONFIG_PACKAGE_luci-theme-argon=y
@@ -191,6 +200,8 @@ jobs:
           CONFIG_PACKAGE_tree=y
           CONFIG_PACKAGE_vim-fuller=y
           CONFIG_PACKAGE_wget=y
+          CONFIG_PACKAGE_rclone=y
+          CONFIG_PACKAGE_ttyd=y
           EOF
 
           # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
