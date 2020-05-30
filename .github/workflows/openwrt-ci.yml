@@ -50,7 +50,7 @@ jobs:
           cd package
           mkdir openwrt-packages
           cd openwrt-packages
-          git gclone https://github.com/project-openwrt/luci-app-serverchan.git
+          git clone https://github.com/project-openwrt/luci-app-serverchan.git
               
           # sudo mkdir -p -m 777 /mnt/openwrt/bin /mnt/openwrt/build_dir/host /mnt/openwrt/build_dir/hostpkg /mnt/openwrt/dl /mnt/openwrt/feeds /mnt/openwrt/staging_dir
           # ln -s /mnt/openwrt/bin ./bin
