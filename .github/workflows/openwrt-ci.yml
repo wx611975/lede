@@ -51,6 +51,7 @@ jobs:
           mkdir openwrt-packages
           cd openwrt-packages
           git clone https://github.com/project-openwrt/luci-app-serverchan.git
+          git clone https://github.com/project-openwrt/helloworld.git
               
           # sudo mkdir -p -m 777 /mnt/openwrt/bin /mnt/openwrt/build_dir/host /mnt/openwrt/build_dir/hostpkg /mnt/openwrt/dl /mnt/openwrt/feeds /mnt/openwrt/staging_dir
           # ln -s /mnt/openwrt/bin ./bin
@@ -167,7 +168,6 @@ jobs:
           CONFIG_PACKAGE_luci-app-v2ray-server=y
           CONFIG_PACKAGE_luci-app-verysync=y
           CONFIG_PACKAGE_luci-app-webadmin=y
-          CONFIG_PACKAGE_luci-app-wireguard=y
           CONFIG_PACKAGE_luci-app-wrtbwmon=y
           CONFIG_PACKAGE_luci-app-rclone=y
           CONFIG_PACKAGE_luci-app-netdata=y
@@ -185,6 +185,11 @@ jobs:
           CONFIG_PACKAGE_luci-i18n-v2ray-server-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-wrtbwmon-zh-cn=y
           CONFIG_PACKAGE_uci-app-serverchan
+          CONFIG_PACKAGE_luci-app-flowoffload
+          CONFIG_PACKAGE_helloworld=y
+          CONFIG_PACKAGE_luci-app-airplay2=y
+          CONFIG_PACKAGE_luci-app-ipsec-vpnd=y
+          CONFIG_PACKAGE_luci-app-samba4-server=y
           EOF
           
           # LuCI主题:
@@ -204,6 +209,7 @@ jobs:
           CONFIG_PACKAGE_wget=y
           CONFIG_PACKAGE_rclone=y
           CONFIG_PACKAGE_ttyd=y
+          CONFIG_PACKAGE_helloworld=y
           EOF
 
           # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
